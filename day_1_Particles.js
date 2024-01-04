@@ -1,4 +1,5 @@
-const FONT_SIZE = 100;
+const isSmallScreen = window.innerWidth < 1220;
+const FONT_SIZE = isSmallScreen ? window.innerWidth / 10 : 100;
 const TEXT = "PARTY~CLES";
 
 const textOutlinePoints = [];
@@ -10,8 +11,10 @@ function setup() {
     const textBounds = font.textBounds(TEXT, 0, 0, FONT_SIZE);
     const bottomPadding = 10;
     const { canvas } = createCanvas(textBounds.w, textBounds.h + bottomPadding);
-    // Stretch the canvas to the inlined width/height.
-    canvas.removeAttribute("style");
+    if (!isSmallScreen) {
+      // Stretch the canvas to the inlined width/height.
+      canvas.removeAttribute("style");
+    }
 
     // Since we are drawing each letter individually,
     // we'll need to space them out manually, using a left padding!
