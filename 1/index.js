@@ -7,7 +7,7 @@ const textOutlinePoints = [];
 function setup() {
   colorMode(HSB, 100);
 
-  loadFont("assets/Milk Mango.ttf", (font) => {
+  loadFont("../assets/Milk Mango.ttf", (font) => {
     const textBounds = font.textBounds(TEXT, 0, 0, FONT_SIZE);
     const bottomPadding = 10;
     const { canvas } = createCanvas(textBounds.w, textBounds.h + bottomPadding);
