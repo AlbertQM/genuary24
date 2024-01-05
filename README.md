@@ -1,3 +1,7 @@
+**Live demo**: [albertqm.github.io/genuary24/](https://albertqm.github.io/genuary24/)
+
+## It's art, you wouldn't get it
+
 [Genuary](https://genuary.art/) is a wonderful little thing I discovered thanks to the orange website.
 
 Will do the prompts in order, but at my own pace.
