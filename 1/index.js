@@ -5,7 +5,7 @@ const TEXT = "PARTY~CLES";
 const textOutlinePoints = [];
 
 function setup() {
-  colorMode(HSB, 100);
+  colorMode(HSB);
 
   loadFont("../assets/Milk Mango.ttf", (font) => {
     const textBounds = font.textBounds(TEXT, 0, 0, FONT_SIZE);
@@ -65,7 +65,7 @@ function setup() {
 
 function draw() {
   for (const p of textOutlinePoints) {
-    stroke(Math.random() * 100, Math.random() * 100, 100);
+    stroke(Math.random() * 360, Math.random() * 100, 100);
     point(p.x, p.y);
   }
 }
