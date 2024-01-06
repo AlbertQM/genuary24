@@ -4,15 +4,54 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="reset.css" />
+    <style>
+      html {
+        height: 100%;
+      }
+
+      body {
+        height: 100%;
+        display: flex;
+
+        /* Polka dot pattern, from the CSS Secrets book */
+        background: #ff149355;
+        background-image: radial-gradient(white 30%, transparent 0),
+          radial-gradient(white 30%, transparent 0);
+        background-size: 30px 30px;
+        background-position: 0 0, 15px 15px;
+      }
+
+      main {
+        display: flex;
+        gap: 8px;
+        margin: auto;
+        flex-wrap: wrap;
+        place-content: center;
+        height: 100%;
+      }
+
+      a {
+        text-decoration: none;
+        padding: 24px 16px;
+        border: 1px solid deeppink;
+        border-radius: 8px;
+        color: deeppink;
+        box-shadow: deeppink 5px 5px 5px 0px;
+        background: white;
+      }
+
+      a:hover {
+        transition: all 250ms;
+        background: deeppink;
+        color: white;
+        border: 1px solid white;
+      }
+    </style>
     <title>Genuary 2024</title>
-    <ul>
-      <li>
-        <a href="./1/index.html">Day 1: "Particles, lots of them"</a>
-      </li>
-      <li>
-        <a href="./2/index.html">Day 2: "No palettes."</a>
-      </li>
-    </ul>
+    <main>
+      <a href="./1/index.html">Day 1: "Particles, lots of them"</a>
+      <a href="./2/index.html">Day 2: "No palettes."</a>
+    </main>
   </head>
   <body></body>
 </html>
