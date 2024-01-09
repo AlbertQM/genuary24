@@ -32,7 +32,7 @@ function drawMolnarSquare(
   }
   // To make mobile a bit more interesting, choose the longer
   // axis as the one that increases the rotation.
-  const longerAxis = Math.max(x, y);
+  const longerAxis = innerWidth >= innerHeight ? x : y;
   const magicRotation = longerAxis / 20;
   for (let i = 0; i < molnarLevel; i++) {
     const magicNumber = Math.sin(Math.random() * 100);
