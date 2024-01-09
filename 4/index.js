@@ -10,7 +10,7 @@ const COLORS = [
 
 function setup() {
   const canvas = createCanvas(innerWidth, innerHeight);
-  fatPixels = generateFatPixels(COLORS[0]);
+  fatPixels = generateFatPixels();
   canvas.mouseClicked((e) => {
     const pixel = fatPixels.get(getSaneRowCol(e.x, e.y));
     pixel.fill = COLORS[++pixel.colorIdx % COLORS.length];
@@ -39,7 +39,7 @@ function generateFatPixels(fill) {
       const maybeExistingPixel = fatPixels.get(key);
       newFatPixels.set(key, {
         rect: [row, col, PIXEL.width, PIXEL.height],
-        fill: fill ?? maybeExistingPixel?.fill ?? COLORS[0],
+        fill: maybeExistingPixel?.fill ?? COLORS[0],
         colorIdx: 0,
       });
     }
