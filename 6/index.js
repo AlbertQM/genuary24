@@ -41,7 +41,7 @@ function draw() {
     // Months are 0-indexed, so add 1.
     (now.getMonth() + 1) * 30,
     (360 / daysInMonth(now.getFullYear(), now.getMonth())) * now.getDate(),
-    now.getDay() * 51.42,
+    (now.getDay() + 1) * 51.42,
     (now.getHours() + 1) * 15,
     (now.getMinutes() + 1) * 6,
     now.getSeconds() * 6,
