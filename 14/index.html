@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../reset.css" type="text/css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&lt;1kb</title>
+    <!-- Inspired by https://twitter.com/piterpasma/status/1525927224209199106 -->
+    <canvas id=x><script>X=x.getContext("2d");s=Math.sin;p=[...Array(x.height=x.width=w=904)].map(G=Math.random);g=([x,y],[a,d])=>w+s(x*y*9*s(d*3.14)**3+d*1.68)**3*w;for(v=[0,i=9e5];--i;v=v?.map((x,j)=>g(v,p.slice(h+j*2))))h=G(X.fillRect(...v,2,2))</script>
+  </head>
+  <body></body>
+</html>
