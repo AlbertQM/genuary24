@@ -12,6 +12,9 @@
       body {
         height: 100%;
         display: flex;
+        flex-direction: column;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
 
         /* Polka dot pattern, from the CSS Secrets book */
         background: #ff149355;
@@ -30,7 +33,7 @@
         padding: 20px 0 20px;
       }
 
-      a {
+      main a {
         text-decoration: none;
         padding: 24px 16px;
         border: 1px solid deeppink;
@@ -40,14 +43,38 @@
         background: white;
       }
 
-      a:hover {
+      main a:hover {
         transition: all 250ms;
         background: deeppink;
         color: white;
         border: 1px solid white;
       }
+
+      nav {
+        display: flex;
+        align-items: center;
+        padding: 8px 16px;
+        height: 50px;
+        background-color: deeppink;
+        color: white;
+        box-shadow: 0 0 10px 5px #000000aa;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .title {
+        margin-right: auto;
+        cursor: default;
+      }
     </style>
     <title>Genuary 2024</title>
+    <nav>
+      <span class="title"> Genuary 2024</span>
+      <a href="https://alberto.omg.lol"> Alberto Morabito </a>
+    </nav>
     <main>
       <a href="./1">Day 1: "Particles, lots of them"</a>
       <a href="./2">Day 2: "No palettes"</a>
