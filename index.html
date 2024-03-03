@@ -25,12 +25,21 @@
       }
 
       main {
-        display: flex;
+        --min-col-width: min(200px, 100%);
+        display: grid;
+        /* Somewhat fancy thing to fill the screen with an appropriate
+           number of columns. */
+        grid-template-columns: repeat(
+          auto-fill,
+          minmax(var(--min-col-width), 1fr)
+        );
+        padding: 16px;
         gap: 8px;
+        width: 100%;
+        /* To clamp the horizontal length of the grid for very high 
+           resolutions. I.e. Don't give users neck pain. */
+        max-width: 1270px;
         margin: auto;
-        flex-wrap: wrap;
-        place-content: center;
-        padding: 20px 0 20px;
       }
 
       main a {
